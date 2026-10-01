@@ -918,7 +918,7 @@ export default function App() {
     <svg className="ill" viewBox="0 0 54 54" aria-hidden="true"><circle className="f-teal" cx="27" cy="27" r="26"/><path className="f-onacc" d="M21 16 L38 27 L21 38 Z"/></svg>
     <div>
       <p className="demo-t">Video demo</p>
-      <p><span className="isi">ISI: tautan video demo</span></p>
+      <p><span className="isi"><a href="https://youtu.be/cJnMIg41RDY?si=OBBNCnb5GNFBwr-T" target="_blank" rel="noopener noreferrer">https://youtu.be/cJnMIg41RDY?si=OBBNCnb5GNFBwr-T</a></span></p>
     </div>
   </div>
 
