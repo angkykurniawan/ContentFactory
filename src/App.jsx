@@ -244,11 +244,14 @@ ol.chain li.bad b{color:var(--reject)}
 .cap2 b{display:block;color:var(--ink);font-size:1rem;margin-bottom:3px}
 
 /* demo */
-.demo{display:flex;gap:16px;align-items:center;border:2px dashed var(--rule-strong);border-radius:16px;padding:18px 20px;background:var(--surface)}
-.demo .ill{width:54px;flex:none}
-.demo p{margin:0}
-.demo-t{font-family:var(--f-display);font-weight:700;margin-bottom:.35rem!important}
-.isi{font-family:var(--f-display);font-weight:700;font-size:.95rem;background:var(--amber-soft);border:1.5px dashed var(--amber);border-radius:7px;padding:.12em .5em}
+.demo{border:1px solid var(--rule);border-radius:18px;padding:clamp(12px,2.6vw,20px);background:var(--surface)}
+.demo-h{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;margin-bottom:12px}
+.demo-h p{margin:0}
+.demo-t{display:flex;gap:10px;align-items:center;font-family:var(--f-display);font-weight:700}
+.demo-t .ill{width:30px;flex:none}
+.demo-yt{font-family:var(--f-display);font-weight:600;font-size:.9rem}
+.demo-frame{position:relative;aspect-ratio:16/9;width:100%;border-radius:12px;overflow:hidden;background:#000}
+.demo-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
 /* alur */
 ol.flow{list-style:none;padding:0;margin-top:2rem;margin-bottom:2rem}
@@ -915,10 +918,19 @@ export default function App() {
   </figure>
 
   <div className="demo">
-    <svg className="ill" viewBox="0 0 54 54" aria-hidden="true"><circle className="f-teal" cx="27" cy="27" r="26"/><path className="f-onacc" d="M21 16 L38 27 L21 38 Z"/></svg>
-    <div>
-      <p className="demo-t">Video demo</p>
-      <p><span className="isi"><a href="https://youtu.be/cJnMIg41RDY?si=OBBNCnb5GNFBwr-T" target="_blank" rel="noopener noreferrer">https://youtu.be/cJnMIg41RDY?si=OBBNCnb5GNFBwr-T</a></span></p>
+    <div className="demo-h">
+      <p className="demo-t"><svg className="ill" viewBox="0 0 54 54" aria-hidden="true"><circle className="f-teal" cx="27" cy="27" r="26"/><path className="f-onacc" d="M21 16 L38 27 L21 38 Z"/></svg>Video demo</p>
+      <p className="demo-yt"><a href="https://youtu.be/cJnMIg41RDY" target="_blank" rel="noopener noreferrer">Buka di YouTube ↗</a></p>
+    </div>
+    <div className="demo-frame">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/cJnMIg41RDY?rel=0"
+        title="Video demo Content Factory"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
     </div>
   </div>
 
